@@ -1,0 +1,54 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Actor);
+
+$special-red: rgb(238,67,58);
+$special-brown: rgb(117,100,101);
+$special-blue: rgb(27,56,84);
+/* navbar */
+.navbar {
+  background-color: white;
+  height:10px;
+  color: $special-red;
+
+}
+
+
+.nav {
+  background-color: white;
+  height:10px;
+  color: $special-red;
+  text-align: center;
+	
+}
+
+.navbar-header{
+	color : $special-red;
+	font-size: 3em;
+	font-family: 'Actor', sans-serif;
+}
+
+ .jumbotron {
+    background-color: $special-blue;
+    color: $special-blue;
+    margin-top: 40px;
+    border-style: solid;
+ }
+
+ .header-desc {
+  font-size: 5em;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  color: $special-red;
+  text-align: center;
+  font-family: 'Actor', sans-serif;
+}
+.header-post_desc {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 60px;
+  color: white;
+  text-align: center;
+  font-family: 'Actor', sans-serif;
+}
+
