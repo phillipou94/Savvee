@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 	validates :password_digest, length: { minimum: 6 }
 
 	has_secure_password
+  has_many :topics
+  has_many :relationships, class_name:  "Relationship",
+                                  foreign_key: "topic_id",
+                                  dependent:   :destroy
 
   # Returns the hash digest of the given string.
   def User.digest(string)
@@ -36,4 +40,9 @@ class User < ActiveRecord::Base
     return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
+
+
+    def follow_topic(topic)
+      relationships.create(topic_id: topic.id)
+    end
 end

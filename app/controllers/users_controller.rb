@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       #log_in @user
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to choose_user_path(@user.id)
+      redirect_to new_topic_path
     else
       render 'new'
     end

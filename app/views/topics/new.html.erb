@@ -1,0 +1,13 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p class = "test"> choose </p>
+
+ <%= form_for(Topic.new) do |f| %> <!-- built-in form creation function -->
+      <%= f.text_field :name, class: 'form-control', :placeholder => "What do you want to learn?" %>
+      <%= f.submit "Enter", class: "form-button grow" %>
+<% end %>

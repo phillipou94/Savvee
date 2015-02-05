@@ -10,4 +10,7 @@ Rails.application.routes.draw do
       get 'choose' => 'selection#choose'
     end
   end 
+
+  post 'create_topic' => 'topics#create'
+  resources :topics
 end

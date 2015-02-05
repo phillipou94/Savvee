@@ -13,12 +13,19 @@ $special-blue: rgb(27,56,84);
 
 }
 
+.login-wrapper{
+  background-color: $special-red;
+  padding: 60px;
+  
+}
+
 
 .navbar-header{
 	color : $special-red;
 	font-size: 3em;
 	font-family: 'Actor', sans-serif;
 }
+
 
  .jumbotron {
     background-color: $special-blue;

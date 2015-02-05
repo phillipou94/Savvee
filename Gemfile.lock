@@ -63,9 +63,9 @@ GEM
     execjs (2.3.0)
     faker (1.4.2)
       i18n (~> 0.5)
-    fancybox-rails (0.2.1)
-      railties (>= 3.1.0)
-    globalid (0.3.0)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
+    globalid (0.3.1)
       activesupport (>= 4.1.0)
     hike (1.2.3)
     i18n (0.7.0)
@@ -166,7 +166,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   faker (= 1.4.2)
-  fancybox-rails
+  fancybox2-rails
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.0)
