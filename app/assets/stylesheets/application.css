@@ -12,4 +12,17 @@
  *
  *= require_tree .
  *= require_self
+
+
  */
+
+  *= require fancybox
+
+  
+.myClose {
+  background: #343C43;
+  border-radius: 30px;
+  background-image: none;
+  color: white;
+  padding: 11px;
+}

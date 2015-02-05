@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       #log_in @user
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to root_url
+      redirect_to choose_user_path(@user.id)
     else
       render 'new'
     end

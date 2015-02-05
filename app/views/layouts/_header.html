@@ -2,7 +2,9 @@
    <div class="container">
       <nav>
          <ul class="nav navbar-nav pull-right">
-            <%= link_to "Get Started", '#login-form', class: 'fancybox', style: 'color: white' %>
+            	<li><%= link_to "Sign Up", new_user_path %></li>
+            	<li><%= link_to "Log In", login_path %></li>
+               <li><%= link_to "Get Started", login_path, class: 'fancybox' %></li>
          </ul>
          <ul class="nav navbar-nav navbar-left">
           <li><%= link_to "Savvee", root_url, :class => "navbar-header", :style => "color:rgb(238,67,58);" %></li>
@@ -11,3 +13,5 @@
       </nav>
    </div>
 </header>
+
+

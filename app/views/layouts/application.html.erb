@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 <%= render "layouts/header" %>
@@ -12,5 +13,18 @@
 
 <%= yield %>
 
+<!-- Popup - This probably does not belong here -->
+    <div style="display:none;">
+      <div id="login-form">
+        <%= render 'shared/popover_login_form' unless @disable_nav%>
+      </div>
+    </div>
+
 </body>
+
+
+
+
 </html>
+
+
