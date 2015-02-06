@@ -7,10 +7,11 @@ class User < ActiveRecord::Base
 	validates :password_digest, length: { minimum: 6 }
 
 	has_secure_password
-  has_many :topics
+ 
   has_many :relationships, class_name:  "Relationship",
-                                  foreign_key: "topic_id",
+                                  foreign_key: "user_id",
                                   dependent:   :destroy
+  has_many :topics, through: :relationships, source: :topic
 
   # Returns the hash digest of the given string.
   def User.digest(string)
