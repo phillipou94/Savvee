@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	attr_accessor :remember_token
 	before_save { self.email = email.downcase }
 	validates :name,  presence: true, length: { maximum: 50 }
-  	validates :email, presence: true, length: { maximum: 255 }, uniqueness: { case_sensitive: false }
+  validates :email, presence: true, length: { maximum: 255 }, uniqueness: { case_sensitive: false }
 
 	validates :password_digest, length: { minimum: 6 }
 
@@ -42,7 +42,10 @@ class User < ActiveRecord::Base
   end
 
 
-    def follow_topic(topic)
-      relationships.create(topic_id: topic.id)
-    end
+  def follow_topic(topic)
+    relationship = Relationship.new
+    relationship.topic_id = topic.id
+    relationship.user_id = self.id
+    relationship.save
+  end
 end

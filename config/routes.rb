@@ -5,12 +5,8 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   post   'signup' => 'users#create'
   resources :users
-  resources :users do
-  	member do
-      get 'choose' => 'selection#choose'
-    end
-  end 
 
   post 'create_topic' => 'topics#create'
   resources :topics
+  resources :relationships,       only: [:create, :destroy]
 end

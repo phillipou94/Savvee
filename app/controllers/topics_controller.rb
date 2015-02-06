@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+
 	def new
 		@topic = Topic.new
 	end 
@@ -6,8 +7,10 @@ class TopicsController < ApplicationController
 	def create
 		@topic = Topic.new(topic_params)
 		if @topic.save
-			current_user.follow_topic(@topic) #follow topic after creation
-      		redirect_to root_url
+			user = User.find(1)
+			user.follow_topic(@topic) #follow topic after creation
+      		#render('_topic_card', object:@topic)
+      		render 'new'
     	else
       		render 'new'
     	end
