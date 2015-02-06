@@ -18,25 +18,13 @@
 
 /* login */
 
+
+
 $(document).ready(function() {
   $("a.fancybox").fancybox();
-  tpl: {
-      closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose glyphicon glyphicon-remove" href="javascript:;" style="background-image:none;"></a>'
-    }
+   
 });
 
 $(':button').click(function() {
     parent.$.fancybox.close();
 })
-
-
-
-$("#SelectionButton").click(function(event) {
-
-
-      var htmlToInsert = ('<p> Poop </p>');
-
-      //manually insert this html string after first row
-      $(htmlToInsert).insertAfter( $(".test") );
-
-});
