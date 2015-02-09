@@ -11,3 +11,12 @@
       <%= f.text_field :name, class: 'form-control', :placeholder => "What do you want to learn?" %>
       <%= f.submit "Enter", class: "form-button grow" %>
 <% end %>
+
+<div id="topics_to_learn">
+ <% if @topics_to_learn.any? %>
+   <% @topics_to_learn.each do |topic| %>
+	<%= render topic %>
+   <% end %>
+ <% end %>
+</div>
+

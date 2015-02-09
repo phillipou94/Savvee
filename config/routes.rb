@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   post 'create_topic' => 'topics#create'
   resources :topics
   resources :relationships,       only: [:create, :destroy]
+
+  
 end

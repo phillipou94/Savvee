@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205215129) do
+ActiveRecord::Schema.define(version: 20150209034629) do
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "topic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "is_expert?"
   end
 
   add_index "relationships", ["topic_id"], name: "index_relationships_on_topic_id"

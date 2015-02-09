@@ -4,6 +4,9 @@
          <ul class="nav navbar-nav pull-right">
             <% if logged_in? %>
                <li>
+                  <%= link_to "Add Interests", new_topic_path %>
+               </li>
+               <li>
                   <%= link_to "Profile", '#' %>
                </li>
                <li>

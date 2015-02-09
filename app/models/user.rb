@@ -47,6 +47,15 @@ class User < ActiveRecord::Base
     relationship = Relationship.new
     relationship.topic_id = topic.id
     relationship.user_id = self.id
-    relationship.save
+    if Relationship.where(:user_id=>self.id).where(:topic_id=>topic.id).any?
+      
+    else 
+      relationship.save
+    end 
   end
+
+  def unfollow_topic(topic)
+    Relationship.find(topic.relationships.first.id).destroy
+
+  end 
 end

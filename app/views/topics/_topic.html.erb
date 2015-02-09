@@ -1,0 +1,4 @@
+<section class="topic_card" id="topic-<%= topic.id %>">
+	<h1> <%= topic.name %> </h1>
+	<%= link_to "x", relationship_path(topic.relationships.first.id), method: :delete %>
+</section>

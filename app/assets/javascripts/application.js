@@ -28,3 +28,5 @@ $(document).ready(function() {
 $(':button').click(function() {
     parent.$.fancybox.close();
 })
+
+$("#topics_to_learn").load("/views/topics/topic");
